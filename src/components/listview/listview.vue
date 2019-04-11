@@ -6,6 +6,9 @@
         <p class="p" v-for="(pitem,index) in item.list" :key="index">{{pitem}}</p>
       </li>
     </ul>
+    <ul class="fixed-list">
+      <li class="fixed-li" v-for="(item,index) in initData" :key="index">{{item.title}}</li>
+    </ul>
   </scroll>
 </template>
 
@@ -63,5 +66,21 @@
   .p{
     height: 50px;
     border-bottom: 1px solid black;
+  }
+  .fixed-list{
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    background: palegreen;
+  }
+  .fixed-li{
+    font-size: 12px;
+    padding: 3px 0;
   }
 </style>

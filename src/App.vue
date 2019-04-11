@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <listview/>
+    <create-poster/>
   </div>
 </template>
 
 <script>
 import Listview from 'components/listview/listview.vue'
-
+import CreatePoster from 'components/create-poster/create-poster'
 export default {
   name: 'app',
   components: {
-    Listview
+    Listview,
+    CreatePoster
   }
 }
 </script>
